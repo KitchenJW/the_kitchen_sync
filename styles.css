@@ -1,0 +1,208 @@
+body * {
+    box-sizing: border-box;
+    margin: 0rem;
+    padding: 0rem;
+    }
+    video {
+    width: 100vw;
+    z-index: 100000000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+    main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    h1 {
+    padding: 0rem;
+    margin: 0rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+    color: #000;
+    }
+    h2 {
+    padding: 0rem;
+    margin: 0rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    color: #000;
+    }
+    button {
+    background-color: #c0c0c0;
+    color: #630675;
+    font-size: 1rem;
+    font-weight: bolder;
+    height: 3.5vh;
+    }
+    .next {
+    position: absolute;
+    top: 90vh;
+    }
+    #toolbar {
+    position: absolute;
+    top: 75vh;
+    left: 20vw;
+    width: 60vw;
+    display: flex;
+    justify-content: space-around;
+    }
+    .piece-holder {
+    border: solid 1px #000;
+    display: flex;
+    }
+    #hud {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2rem;
+    background-color: #b6b2b4;
+    color: #630675;
+    text-align: center;
+    height: 2rem;
+    }
+    #score,
+    #timer {
+    border: none;
+    }
+    #browse {
+    display: flex;
+    float: left;
+    }
+    #pics {
+    position: absolute;
+    top: 0vh;
+    left: 1vw;
+    }
+    #music {
+    position: absolute;
+    top: 7vh;
+    left: 1vw;
+    }
+    #musicOn {
+    position: absolute;
+    top: 12vh;
+    left: 1vw;
+    }
+    #musicOff {
+    position: absolute;
+    top: 12vh;
+    left: 5vw;
+    }
+    #message {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 6em;
+    text-align: center;
+    color: #05eb05;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-name: bounceIn;
+    }
+    @keyframes bounceIn {
+    0% {
+    transform: scale(0.1);
+    opacity: 0;
+    }
+    60% {
+    transform: scale(1.2);
+    opacity: 1;
+    }
+    100% {
+    transform: scale(1);
+    }
+    }
+    #highscore {
+    position: fixed;
+    display: flex;
+    justify-content: start;
+    top: 30vh;
+    left: 45vw;
+    margin: 0;
+    padding: 0;
+    width: 20vw;
+    height: 10vh;
+    font-size: 2.25rem;
+    color: #630675;
+    }
+    #restart {
+    position: fixed;
+    top: 50vh;
+    left: 45vw;
+    width: 10vw;
+    height: 10vh;
+    }
+    input {
+    padding: 0rem;
+    margin: 0rem;
+    width: 10vw;
+    }
+    #imageLoader,
+    #musicLoader {
+    position: absolute;
+    top: 1vh;
+    left: 0vw;
+    width: 8vw;
+    }
+    .modal-bg {
+    background: rgba(50, 50, 50, 0.8);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .modal {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    }
+    .close {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    background: transparent;
+    border: 0;
+    font-size: 2rem;
+    text-shadow: 0px 0px 3px #000;
+    color: white;
+    line-height: 0.8em;
+    }
+    .hidden {
+    display: none !important;
+    }
+    .modal-body {
+    align-items: center;
+    height: 90vh;
+    }
+    .modal-body img {
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+    }
+    @media screen and (max-width: 1000px) {
+    #toolbar {
+    position: fixed;
+    top: 75vh;
+    left: 2vw;
+    width: 75vw;
+    display: flex;
+    justify-content: space-around;
+    }
+    #hud {
+    display: flex;
+    justify-content: space-around;
+    border: solid #2c032c 3px;
+    font-size: 1rem;
+    background-color: #b6b2b4;
+    color: #630675;
+    text-align: center;
+    width: 7vw;
+    height: 15vh;
+    }
+    button {
+    height: 7vh;
+    }
+    }

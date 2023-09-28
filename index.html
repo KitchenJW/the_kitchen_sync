@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
+<title>Puzzle + Image Slicing</title>
+</head>
+
+<body>
+<video id="chg" autoplay>
+<source src="videos/crazy_head_intro.mp4">
+</video>
+<video id="tks" class="hidden" autoplay>
+<source src="videos/kitchen_sync_intro.mp4">
+</video>
+<div class="modal-bg hidden" aria-hidden="true" role="dialog">
+<section class="modal">
+<button class="close" aria-label="Close the modal window"
+onclick="closeModal();">&times;</button>
+<div class="modal-body">
+</div>
+</section>
+</div>
+<main class="hidden">
+<div id="puzzle"></div>
+</main>
+<section id="toolbar" class="hidden">
+<aside id="browse" class="hidden">
+<button id="pics" onclick="picChoice()">PICS</button>
+<button id="music" onclick="musicChoice()">MUSIC</button>
+<div>
+<button id="musicOff" onclick="stop()">Stop</button>
+<button id="musicOn" onclick="play()">Play</button>
+</div>
+</aside>
+
+<button id="menu" class="" onclick="showMenu()">Browse</button>
+<button id="fixIt" onclick="resetPuzzle()">Reset Puzzle</button>
+<button class="open" onclick="showModalWithImage ()">Hint</button>
+<div id="hud">
+<h2>SCORE</h2>
+<section id="score"></section>
+<h2>TIME</h2>
+<section id="timer"></section>
+</div>
+</section>
