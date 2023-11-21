@@ -30,10 +30,8 @@ let pieceWidth = parseInt(imgOriginalWidth / numSquares);
 let pieceHeight = parseInt(imgOriginalHeight / numSquares);
 function titlePage() {
 document.querySelector('#chg').className = "hidden";
-document.querySelector('#tks').className = "";
 }
 function startGame() {
-document.querySelector('#tks').className = "hidden";
 document.querySelector('main').className = "";
 img.src = piclist[pic];
 img.onload = makePuzzle;
@@ -134,9 +132,9 @@ puzzle.appendChild(randomPiece);
 }
 }
 function getBackgroundColor() {
-const r = Math.floor(Math.random() * 255);
-const g = Math.floor(Math.random() * 255);
-const b = Math.floor(Math.random() * 255);
+const r = Math.floor(Math.random() * 175);
+const g = Math.floor(Math.random() * 175);
+const b = Math.floor(Math.random() * 175);
 console.log(r, g, b);
 return `rgb(${r}, ${g}, ${b})`;
 }
@@ -214,6 +212,7 @@ document.querySelector("#puzzle").innerHTML =
 </section>
 <audio autoplay>
 <source src="sounds/evil_laugh.m4a">
+<type="audio/mpeg">
 </audio>
 <button id="restart" onclick="restart()">Restart</button>
 `;
