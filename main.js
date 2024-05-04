@@ -72,6 +72,30 @@ function startGame() {
 // setTimeout(() => { titlePage() }, 5000);
 //start game after 5 seconds
 
+function playMusic() {
+    const url = 'https://accounts.spotify.com/api/token';
+    const data = {
+        grant_type: 'data: JSON.stringify({ context_uri: "spotify:playlist:6SET13ADRq431RxMsMVlo4" })',
+        client_id: '1c3732984774417c8ebe8095c2affb10',
+        client_secret: 'd13d57b5542740bcbdfc534660419f27'
+    };
+
+    const searchParams = Object.keys(data).map((key) => {
+        return encodeURIComponent(key) + '=' + encodeURIComponent(data[key]);
+    }).join('&');
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: searchParams
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch((error) => console.error('Error:', error));
+}
+
 // function to slice the puzzle based on the size of the original image and
 // the number of squares you want:
 function makePuzzle() {
