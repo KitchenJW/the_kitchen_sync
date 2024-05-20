@@ -111,7 +111,7 @@ function getRandomInt(max) {
 }
 async function getPlaylist() {
   const url =
-    "https://www.apitutor.org/spotify/v1/playlists/6ssF4YQSuHyt8HH8jeQjCb";
+    "https://www.apitutor.org/spotify/v1/playlists/68xqssF3OTTX80JofauQhQ";
   const response = await fetch(url);
   const data = await response.json();
   console.log(data);
@@ -130,7 +130,7 @@ async function getPlaylist() {
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
         loading="lazy">
     </iframe>
-    `;
+    `
 }
 
 // function to slice the puzzle based on the size of the original image and
